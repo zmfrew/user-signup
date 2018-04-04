@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User-Signup</title>
+        <style type="text/css">
+            .error {
+                color: red;
+            }
+            label {
+                line-height: 1.3rem;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Signup</h1>
+
+        {% block content %}
+        {% endblock %}
+        <form method='POST'>
+            <table>
+                <tbody>
+                    <tr>
+                
+                        <td><label>Username</label></td>
+
+                        <td><input name="username" type="text" />
+                        <span class="error"></span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                
+                            <td><label>Password</label></td>
+
+                            <td><input name="password" type="text" />
+                            <span class="error"></span>
+                            </td>
+                    </tr>
+                    
+                    <tr>
+            
+                            <td><label>Verify Password</label></td>
+
+                            <td><input name="verify-password" type="text" />
+                            <span class="error"></span>
+                            </td>
+                    </tr>
+        
+                    <tr>
+            
+                            <td><label>Email (optional)</label></td>
+
+                            <td><input name="email" type="text" />
+                            <span class="error"></span>
+                            </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <input type="submit" />
+        </form>
+    </body>
+</html>
