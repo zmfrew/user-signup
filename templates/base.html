@@ -17,48 +17,40 @@
 
         {% block content %}
         {% endblock %}
-        <form method='POST'>
+        <form method="POST" action="/signup">
             <table>
                 <tbody>
                     <tr>
-                
                         <td><label>Username</label></td>
-
                         <td><input name="username" type="text" />
-                        <span class="error"></span>
+                        <span class="error">{{ username_error }}</span>
                         </td>
                     </tr>
 
                     <tr>
-                
                             <td><label>Password</label></td>
-
-                            <td><input name="password" type="text" />
-                            <span class="error"></span>
+                            <td><input name="password" type="password" />
+                            <span class="error">{{ password_error }}</span>
                             </td>
                     </tr>
                     
                     <tr>
-            
                             <td><label>Verify Password</label></td>
-
-                            <td><input name="verify-password" type="text" />
-                            <span class="error"></span>
+                            <td><input name="verify-password" type="password" />
+                            <span class="error">{{ verify_password_error }}</span>
                             </td>
                     </tr>
         
                     <tr>
-            
                             <td><label>Email (optional)</label></td>
 
                             <td><input name="email" type="text" />
-                            <span class="error"></span>
+                            <span class="error">{{ email_error }}</span>
                             </td>
                     </tr>
-
                 </tbody>
             </table>
-            <input type="submit" />
+            <input type="submit" name="signup" />
         </form>
     </body>
 </html>
