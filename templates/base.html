@@ -22,7 +22,7 @@
                 <tbody>
                     <tr>
                         <td><label>Username</label></td>
-                        <td><input name="username" type="text" />
+                        <td><input name="username" type="text" value="{{ request.form['username'] }}" />
                         <span class="error">{{ username_error }}</span>
                         </td>
                     </tr>
@@ -44,7 +44,7 @@
                     <tr>
                             <td><label>Email (optional)</label></td>
 
-                            <td><input name="email" type="text" />
+                            <td><input name="email" type="text" value="{{ request.form['email'] }}"/>
                             <span class="error">{{ email_error }}</span>
                             </td>
                     </tr>
